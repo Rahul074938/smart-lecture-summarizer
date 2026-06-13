@@ -1,12 +1,5 @@
 # 🎓 Smart Lecture Summarizer — AI-Powered Lecture to Notes
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat&logo=python)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-Web_App-black?style=flat&logo=flask)](https://flask.palletsprojects.com)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow?style=flat&logo=huggingface)](https://huggingface.co)
-[![Whisper](https://img.shields.io/badge/OpenAI-Whisper-412991?style=flat&logo=openai)](https://github.com/openai/whisper)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
-
----
 
 ## 🧠 Overview
 
@@ -117,69 +110,6 @@ smart-lecture-summarizer/
     ├── index.html          ← Upload page
     └── result.html         ← Summary output page
 ```
-
----
-
-## 🚀 Setup & Run
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Miini252003/smart-lecture-summarizer.git
-cd smart-lecture-summarizer
-```
-
-### 2. Create Virtual Environment
-```bash
-python -m venv venv
-source venv/bin/activate    # On Windows: venv\Scripts\activate
-```
-
-### 3. Install Python Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Install System Dependencies
-
-**Tesseract OCR** (required for image/slide processing):
-- Ubuntu/Debian: `sudo apt install tesseract-ocr`
-- Windows: [Download installer](https://github.com/tesseract-ocr/tesseract)
-- Mac: `brew install tesseract`
-
-**FFmpeg** (required for audio/video processing):
-- Ubuntu/Debian: `sudo apt install ffmpeg`
-- Windows: [Download](https://ffmpeg.org/download.html)
-- Mac: `brew install ffmpeg`
-
-### 5. Run the App
-```bash
-python app.py
-```
-
-### 6. Open in Browser
-```
-http://127.0.0.1:5000
-```
-
----
-
-## 📦 Key Dependencies
-
-```
-flask
-transformers
-torch
-openai-whisper
-pypdf
-Pillow
-pytesseract
-opencv-python
-moviepy
-reportlab
-```
-
----
-
 ## ⚙️ How It Works
 
 ```
@@ -193,18 +123,6 @@ Step 3 → Content extraction is applied:
 Step 4 → AI/NLP summarization generates concise notes
 Step 5 → Download your summary as a PDF
 ```
-
----
-
-## 🔄 Fallback Behavior
-
-| Scenario | Behavior |
-|---|---|
-| Transformer model fails to load | Automatically uses extractive NLP summarizer |
-| Whisper not installed | App runs, shows warning on result page |
-| OCR dependencies missing | App runs, shows warning on result page |
-
-> The app is designed for **graceful degradation** — it always tries to deliver a summary even if some components are unavailable.
 
 ---
 
@@ -223,22 +141,5 @@ Step 5 → Download your summary as a PDF
 
 ---
 
-## 👩‍💻 Author
 
-**Divyanshi Rana**
-B.Tech Computer Science & Engineering (AI/ML)
-IIMT College of Engineering, Greater Noida, Uttar Pradesh
 
----
-
-## 📫 Connect
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Divyanshi_Rana-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/divyanshi-rana)
-[![GitHub](https://img.shields.io/badge/GitHub-Miini252003-181717?style=flat&logo=github)](https://github.com/Miini252003)
-[![Email](https://img.shields.io/badge/Email-divyanshirana2004@gmail.com-D14836?style=flat&logo=gmail)](mailto:divyanshirana2004@gmail.com)
-
----
-
-## ⭐ Star This Repo
-
-If you found this project useful, please give it a ⭐ — it helps others discover it!

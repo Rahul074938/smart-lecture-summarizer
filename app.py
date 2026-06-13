@@ -8,14 +8,14 @@ from pathlib import Path
 from flask import Flask, flash, redirect, render_template, request, send_file, url_for
 from werkzeug.utils import secure_filename
 
-from smart_lecture_summarizer.config import (
+from config import (
     ALLOWED_EXTENSIONS,
     BASE_DIR,
     OUTPUT_DIR,
     UPLOAD_DIR,
     ensure_directories,
 )
-from smart_lecture_summarizer.pipeline import SmartLecturePipeline
+from pipeline import SmartLecturePipeline
 
 app = Flask(__name__)
 app.secret_key = "smart-lecture-summarizer-secret-key"
@@ -80,4 +80,4 @@ def download(pdf_name: str):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

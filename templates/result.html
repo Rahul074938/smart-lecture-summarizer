@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="result-card">
+
+    <h1>Summary Generated Successfully</h1>
+
+    <div class="file-info">
+        <strong>Uploaded File:</strong> {{ filename }}
+    </div>
+
+    <section>
+        <h2>AI Summary</h2>
+        <div class="summary-box">
+            {{ result.summary_text }}
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Points</h2>
+        <ul class="points">
+            {% for point in result.key_points %}
+                <li>{{ point }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section>
+        <h2>Keywords</h2>
+        <div class="keywords">
+            {% for word in result.keywords %}
+                <span>{{ word }}</span>
+            {% endfor %}
+        </div>
+    </section>
+
+    {% if result.warnings %}
+    <section>
+        <h2>System Warnings</h2>
+        <div class="warning-box">
+            {% for warning in result.warnings %}
+                <p>{{ warning }}</p>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if result.pdf_name %}
+    <a href="/download/{{ result.pdf_name }}" class="download-btn">
+        Download PDF Report
+    </a>
+    {% endif %}
+
+    <br><br>
+
+    <a href="/" class="back-btn">Upload Another File</a>
+
+</div>
+
+{% endblock %}

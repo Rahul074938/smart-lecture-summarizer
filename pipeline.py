@@ -3,10 +3,10 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Dict, List
 
-from smart_lecture_summarizer.config import ARTIFACT_DIR, OUTPUT_DIR
-from smart_lecture_summarizer.extractors import ContentExtractor
-from smart_lecture_summarizer.nlp_engine import NLPSummarizer
-from smart_lecture_summarizer.pdf_exporter import PDFExporter
+from config import ARTIFACT_DIR, OUTPUT_DIR
+from extractor import ContentExtractor
+from nlp_engine import NLPSummarizer
+from pdf_exporter import PDFExporter
 
 
 class SmartLecturePipeline:

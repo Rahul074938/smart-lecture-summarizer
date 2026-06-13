@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+    <h1>Transform Lectures into Smart Notes</h1>
+    <p class="subtitle">
+        Upload PDF, Audio, Video, Images or Text and get keywords and important points instantly.
+    </p>
+
+    <form action="/summarize" method="POST" enctype="multipart/form-data">
+
+        <div class="upload-box">
+            <input type="file" name="lecture_file" required>
+        </div>
+
+        <label>Select Summary Length</label>
+
+        <select name="summary_length">
+            <option value="short">⚡ Short Summary</option>
+            <option value="medium" selected>📘 Medium Summary</option>
+            <option value="long">📚 Detailed Summary</option>
+        </select>
+
+        <button type="submit">Generate AI Summary</button>
+
+    </form>
+
+    <div class="features">
+        <div>📄 PDF Support</div>
+        <div>🎤 Audio Extraction</div>
+        <div>🎥 Video Processing</div>
+        <div>🧠 NLP Summarization</div>
+    </div>
+
+</div>
+
+{% endblock %}
